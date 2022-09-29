@@ -1,0 +1,494 @@
+
+<html>
+    <head>
+    <title>Kristi.diz</title>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;1,600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    <style>
+    body {font-family: "Source sans pro", Georgia, Serif;
+  background-image: url(img/М.jpg);
+  background-size: 110%;
+  background-attachment: fixed;
+  }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: "Source sans pro";
+      letter-spacing: 5px;
+      font-size: 45px;
+    }
+    .w3-white, .w3-hover-white:hover {
+    color: #000!important;
+    background-color: #68237fba!important;
+}
+.w3-padding {
+    padding: 65px 76px!important;
+    font-size: 28px;
+    word-spacing: 0px;
+    padding: 5px;
+}
+.w3-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 350px;
+    margin-left: 30%;
+  }
+
+    .w3-xxlarge{
+      color: #ff9200;
+      text-align: center;
+    }
+    .w3-bar .w3-button {
+    padding: 5;
+    color:rgb(255, 255, 255);
+}
+.w3-display-bottomleft {
+    position: absolute;
+    left: 50%;
+    bottom: 0;}
+    .onebutton{
+      font-size: large;
+      color: #fff;
+      background-color: #68237f;
+      border: rgba(255, 255, 255, 0);
+      padding: 15px;
+      padding-left: 55px;
+      padding-right: 55px;
+      font-size: 30px;
+      text-decoration: none;
+    }
+    .onebutton:hover{
+      background: #ff9200;
+    }
+    .span1{
+      color: #fff;
+    }
+    .span2{
+      color: rgb(0, 255, 26);
+    }
+    .w3-padding-64{
+      margin-top: 150;
+      background-color: rgb(255, 255, 255);
+    }
+    .w4-padding-64{
+      background-image: url(img/m2.jpg);
+      background-repeat: repeat-y ;
+      background-size: 100%;
+    }
+    .w3-center{color: #68237f;
+    }
+    .container-fluid{display: flex;
+                    flex-direction: row; 
+                    flex-wrap:wrap;
+					padding: 10px;
+          text-align: center;
+				}
+        .card-img-top{
+          margin-left: -30px;
+        }
+        .card-text{
+          color: #000;
+          font-size: 22px;
+        }
+        :root {
+   --black-color: #17181c;
+   --blue-color: #3e50b4;
+   --white-rbg-color: 255, 255, 255;
+   --green-rbg-color: 0, 212, 113;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+/*Bloque*/
+.header {
+   width: 100%;
+   height: 300px;
+   box-sizing: border-box;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+
+.cursor {
+   width: 20px;
+   height: 20px;
+   border: 10px solid rgba(var(--white-rbg-color), .8);
+   border-radius: 50%;
+   position: absolute;
+   transition-duration: 200ms;
+   transition-timing-function: ease-out;
+   animation: cursor-animate 550ms infinite alternate;
+}
+
+.cursor::after {
+   content: "";
+   width: 40px;
+   height: 40px;
+   border: 15px solid rgba(var(--white-rbg-color), .2);
+   border-radius: 50%;
+   position: absolute;
+   top: -25px;
+   left: -25px;
+   animation: cursor-animate-2 550ms infinite alternate;
+}
+
+/*Elemento*/
+.header__title {
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 300;
+   color: rgb(var(--green-rbg-color));
+}
+
+.bg__canvas {
+   width: 100%;
+   height: 100vh;
+   background-color: var(--blue-color);
+   box-sizing: border-box;
+}
+
+/*Modificador*/
+.cursor--expand {
+   animation: cursor-animate-3 550ms forwards;
+   border: 10px solid rgb(var(--green-rbg-color));
+}
+.cursor--expand::after {
+   border: 15px solid rgba(var(--green-rbg-color), .3);
+}
+/*Keyframes*/
+@keyframes cursor-animate {
+   from {
+      transform: scale(1);
+   }
+
+   to {
+      transform: scale(1.5)
+   }
+}
+
+@keyframes cursor-animate-2 {
+   from {
+      transform: scale(1);
+   }
+   to {
+      transform: scale(.3);
+   }
+}
+@keyframes cursor-animate-3 {
+   0% {
+      transform: scale(1);
+   }
+   50% {
+      transform: scale(3);
+   }
+   100% {
+      transform: scale(1);
+      opacity: 0;
+   }
+}
+.card-img-top2{
+  margin: 25px;
+  padding: 10px;
+  
+}
+.modal_div {
+   width: 500px;
+   height: 500px; /* Рaзмеры дoлжны быть фиксирoвaны */
+   border-radius: 5px;
+   border: 3px #000 solid;
+   background: #fff;
+   position: fixed; /* чтoбы oкнo былo в видимoй зoне в любoм месте */
+   top: 45%; /* oтступaем сверху 45%, oстaльные 5% пoдвинет скрипт */
+   left: 50%; /* пoлoвинa экрaнa слевa */
+   margin-top: -150px;
+   margin-left: -150px; /* oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo */
+   display: none; /* в oбычнoм сoстoянии oкнa не дoлжнo быть */
+   opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
+   z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+   padding: 20px 10px;
+}
+/* Кнoпкa зaкрыть для тех ктo в тaнке) */
+.modal_close {
+   width: 21px;
+   height: 21px;
+   position: absolute;
+   top: 10px;
+   right: 10px;
+   cursor: pointer;
+   display: block;
+}
+/* Пoдлoжкa */
+#overlay {
+   z-index:3; /* пoдлoжкa дoлжнa быть выше слoев элементoв сaйтa, нo ниже слoя мoдaльнoгo oкнa */
+   position:fixed; /* всегдa перекрывaет весь сaйт */
+   background-color:#000; /* чернaя */
+   opacity:0.8; /* нo немнoгo прoзрaчнa */
+   -moz-opacity:0.8; /* фикс прозрачности для старых браузеров */
+   filter:alpha(opacity=80);
+   width:100%;
+   height:100%; /* рaзмерoм вo весь экрaн */
+   top:0; /* сверху и слевa 0, oбязaтельные свoйствa! */
+   left:0;
+   cursor:pointer;
+   display:none; /* в oбычнoм сoстoянии её нет) */
+}
+.card-text {
+    color: #000;
+    font-size: 22px;
+    text-align: center;
+}
+.col-md-5.mx-auto{
+  padding: 20px;
+  text-align: center;
+}
+.form-control{
+  width: 300px;
+  height: 50px;
+  padding: 5px;
+  margin: 5px;
+}
+.container-fluid- {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+}
+    </style>
+    </head>
+    <body>
+    
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+        <a href="#home" class="w3-bar-item w3-button">Главная</a>
+        <!-- Right-sided navbar links. Hide them on small screens -->
+        <div class="w3-right w3-hide-small">
+          <a href="#obomne" class="w3-bar-item w3-button">Обо мне</a>
+          <a href="#obr" class="w3-bar-item w3-button">Образование</a>
+          <a href="#oputrab" class="w3-bar-item w3-button">#</a>
+          <a href="#about" class="w3-bar-item w3-button">#</a>
+          <a href="#port" class="w3-bar-item w3-button">Портфолио </a>
+          <a href="#contact" class="w3-bar-item w3-button">#</a>
+          <a href="#contact" class="w3-bar-item w3-button">Контакты</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Header -->
+    <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+      <img class="w3-image" src="/img/mo.png" alt="Hamburger Catering" width=40%>
+      <div class="w3-display-bottomleft w3-padding-large w3-opacity" id="obomne" >
+        
+      </div>
+      <h1 class="w3-xxlarge">КРИСТИНА НОСОРЕВА <span class="span1"><br>3D художник <br></span><br>
+      <button class="onebutton"><a href="#port" class="onebutton">Портфолио</a></button>
+      
+      </h1>
+    </header>
+    
+    <!-- Page content -->
+    <div class="w3-content" style="max-width:1100px" >
+    
+      <!-- About Section -->
+      <div class="w3-row w3-padding-64" >
+        <h1 class="w3-center">Обо мне</h1><br>
+        <div class="w3-col m6 w3-padding-large w3-hide-small">
+         <img src="/img/kris.png" class="" alt="Table Setting" width="640" height="360">
+        </div>
+    
+        <div class="w3-col m6 w3-padding-large">
+          
+          <h5 class="w4-center">Кристина Носорева</h5>
+          <p class="w3-large">Дипломированный специалист в области дизайна.
+             Опыт работы над дизайн-проектами, в сфере графического дизайна. <br>
+              Дата рождения: 22.03.1994 г.<br> Семейное положение: не замужем <br>
+               Город: Москва <br> Окончила "Курс графического дизайна" и "Базовый курс по 3D моделированию".</p>
+          <p class="w3-large w3-text-grey w3-hide-medium" id="obr"></p>
+
+        </div>
+        
+      </div>
+      
+      <hr>
+      
+      <!-- Menu Section -->
+      <div class="w3-row w4-padding-64" >
+        <h1 class="w3-xxlarge">Образование</h1>
+        <div class="container-fluid">
+          <div class="card" style="width: 18rem;">
+            <img src="/img/19.png" class="card-img-top" width=120% alt="...">
+            <div class="card-body">
+              <p class="card-text">2004-2009 гг.<br>
+                художественная школа
+                <br>№ 4 им. П.И. Котова</p>
+            </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+            <img src="/img/21.png" class="card-img-top" width=120% alt="...">
+            <div class="card-body">
+              <p class="card-text">2009-2013 гг.<br>
+                Астраханское художественное 
+                <br>училище им. П. А. Власова
+                <br>Специальность: Дизайнер</p>
+            </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+            <img src="/img/20.png" class="card-img-top" width=120% alt="..."><a href="/coffemachine.html"></a>
+            <div class="card-body">
+              <p class="card-text">2021 г.<br>
+                Diskill. Курс: Кейсы<br>
+                Специальность: <br>
+                Графический дизайнер</p>
+            </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="/img/24.png" class="card-img-top" width=120% alt="..."><a href="/coffemachine.html"></a>
+              <div class="card-body">
+                <p class="card-text">2022 г.<br>
+                  Kaino <br id="port">
+                  Blender: Gamedev </p>
+              </div>
+              </div>
+        </div> 
+      </div>
+      
+  <!-- About Section -->
+  <hr >
+  <!-- Menu Section -->
+  <div class="w3-row w4-padding-64" >
+    <h1 class="w3-center">Портфолио</h1>
+    <div class="container-fluid w5-padding-64">
+      <div class="card" style="width: 23rem;">
+        <img src="/img/01.png" class="card-img-top2" width=100% alt="..."><a href="#modal1" class="open_modal">Открыть</a></a>
+        </div>
+        <div class="card" style="width: 23rem;">
+        <img src="/img/02.png" class="card-img-top2" width=100% alt="..."><a href="#modal1" class="open_modal">Открыть</a></a>
+        </div>
+        <div class="card" style="width: 23rem;">
+        <img src="/img/07.png" class="card-img-top2" width=100%  alt="..."><a href="#modal1" class="open_modal">Открыть</a></a>
+        </div>
+        <div class="card" style="width: 23rem;">
+          <img src="/img/04.png" class="card-img-top2" width=100% alt="..."><a href="#modal1" class="open_modal">Открыть</a></a>
+          </div>
+          <div class="card" style="width: 23rem;">
+            <img src="/img/06.png" class="card-img-top2" width=100% alt="..."><a href="#modal1" class="open_modal">Открыть</a></a>
+            </div>
+            <div class="card" style="width: 23rem;">
+              <img src="/img/08.png" class="card-img-top2" width=100% alt="..."><a href="#modal1" class="open_modal">Открыть</a></a>
+              </div>
+    </div> 
+  </div>
+  <div id="modal1" class="modal_div">
+    <span class="modal_close"><span class="onebutton">X</span></span>
+    <!--Здесь размещаем информацию которая будет в модальном окне.-->
+ </div>
+ <div id="overlay"></div><!-- Пoдлoжкa, oднa нa всю стрaницу -->
+ 
+  <hr>
+
+  <div id="modal1" class="modal_div">
+    <span class="modal_close">X</span>
+    <form>
+       <input type="text" name="">
+       <button>Отправить</button>
+    </form>
+</div>
+
+
+      <div class="w3-container w3-padding-64" id="contact">
+        <div class="block"><h1 class="w3-xxlarge">Контакты</h1><br>
+          </div>
+          
+          
+          <p class="w3-text-blue-grey w3-large"><b></b></p>
+          <p class="card-text">Вы можете связаться со мной по телефону +7 999 800 89 34,<br>электронной почте kris22.3@mail.ru<br> или вы можете отправить мне сообщение:</p>
+
+            <div class="container-fluid-">
+              <form onsubmit="sendForm(this); return false;">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <span class="material-symbols-outlined">  </span>
+                    </div>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Имя" required name="name" />
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <span class="material-symbols-outlined">  </span>
+                    </div>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Телефон" required name="lastname"  />
+                </div>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <span class="material-symbols-outlined">  </span>
+                    </div>
+                  </div>
+                  <input type="email" class="form-control" placeholder="Email" required name="email" />
+                </div>
+                         <p id="info" style = "color: red"></p>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">
+                      <span class="material-symbols-outlined">  </span>
+                    </div>
+                  </div>
+                  
+      
+                              &nbsp;<span 
+                  class="material-symbols-outlined"
+                    onmousedown="formPass.type='text'; this.nextElementSibling.
+                  hidden=false; this.hidden=true;">
+                  
+                  </span>
+      
+                  &nbsp;<span 
+                  class="material-symbols-outlined"
+                    hidden 
+                  onmouseup="formPass.type='password'; 
+                  this.previousElementSibling.hidden=false; this.hidden=true;">
+                  
+                  </span>
+                </div>
+                <div class="form-check mb-3">
+                  <input class="form-check-input" type="checkbox" required />
+                  <label class="form-check-label" for="autoSizingCheck"
+                    >Даю согласие на обработку персональных данных</label
+                  >
+                </div>
+                <input type="submit" class="form-control btn btn-success" value="Отправить сообщение" />
+              </form>
+            </div>
+          
+  
+            </div>
+    <!-- End page content -->
+    </div>
+    
+    <!-- Footer -->
+    <footer class="w3-center w3-light-grey w3-padding-32">
+      <p>Powered by <a href="#" title="A.S.Scvor" target="_blank" class="w3-hover-text-green">A.S.Scvor</a></p>
+    </footer>
+      
+      <div class="cursor"></div>
+    <script src="/js/app.js"></script>
+
+    </body>
+    </html>
+    
