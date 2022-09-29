@@ -34,4 +34,232 @@
     font-style: normal; 
     font-weight: bold; 
     } 
+
+  .w3-xxlarge{
+    color: #ff9200;
+    text-align: center;
+  }
+  .w3-bar .w3-button {
+  padding: 5;
+  color:rgb(255, 255, 255);
+}
+.w3-display-bottomleft {
+  position: absolute;
+  left: 50%;
+  bottom: 0;}
+  .onebutton{
+    font-size: large;
+    color: #fff;
+    background-color: #68237f;
+    border: rgba(255, 255, 255, 0);
+    padding: 15px;
+    padding-left: 55px;
+    padding-right: 55px;
+    font-size: 30px;
+    text-decoration: none;
+  }
+  .onebutton:hover{
+    background: #ff9200;
+  }
+  .span1{
+    color: #fff;
+  }
+  .span2{
+    color: rgb(0, 255, 26);
+  }
+  .w3-padding-64{
+    margin-top: 150;
+    background-color: rgb(255, 255, 255);
+  }
+  .w4-padding-64{
+    background-image: url(img/m2.jpg);
+    background-repeat: repeat-y ;
+    background-size: 100%;
+  }
+  .w3-center{color: #68237f;
+  }
+  .container-fluid{display: flex;
+                  flex-direction: row; 
+                  flex-wrap:wrap;
+        padding: 10px;
+        text-align: center;
+      }
+      .card-img-top{
+        margin-left: -30px;
+      }
+      .card-text{
+        color: #000;
+        font-size: 22px;
+      }
+      :root {
+ --black-color: #17181c;
+ --blue-color: #3e50b4;
+ --white-rbg-color: 255, 255, 255;
+ --green-rbg-color: 0, 212, 113;
+}
+
+* {
+ margin: 0;
+ padding: 0;
+}
+
+
+
+
+
+
     
+    /*Bloque*/
+.header {
+    width: 100%;
+    height: 300px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+   
+   
+   .cursor {
+    width: 20px;
+    height: 20px;
+    border: 10px solid rgba(var(--white-rbg-color), .8);
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: cursor-animate 550ms infinite alternate;
+   }
+   
+   .cursor::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    border: 15px solid rgba(var(--white-rbg-color), .2);
+    border-radius: 50%;
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    animation: cursor-animate-2 550ms infinite alternate;
+   }
+   
+   /*Elemento*/
+   .header__title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    color: rgb(var(--green-rbg-color));
+   }
+   
+   .bg__canvas {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--blue-color);
+    box-sizing: border-box;
+   }
+   
+   /*Modificador*/
+   .cursor--expand {
+    animation: cursor-animate-3 550ms forwards;
+    border: 10px solid rgb(var(--green-rbg-color));
+   }
+   .cursor--expand::after {
+    border: 15px solid rgba(var(--green-rbg-color), .3);
+   }
+   /*Keyframes*/
+   @keyframes cursor-animate {
+    from {
+       transform: scale(1);
+    }
+   
+    to {
+       transform: scale(1.5)
+    }
+   }
+   
+   @keyframes cursor-animate-2 {
+    from {
+       transform: scale(1);
+    }
+    to {
+       transform: scale(.3);
+    }
+   }
+   @keyframes cursor-animate-3 {
+    0% {
+       transform: scale(1);
+    }
+    50% {
+       transform: scale(3);
+    }
+    100% {
+       transform: scale(1);
+       opacity: 0;
+    }
+   }
+   .card-img-top2{
+   margin: 25px;
+   padding: 10px;
+   
+   }
+   .modal_div {
+    width: 500px;
+    height: 500px; /* Рaзмеры дoлжны быть фиксирoвaны */
+    border-radius: 5px;
+    border: 3px #000 solid;
+    background: #fff;
+    position: fixed; /* чтoбы oкнo былo в видимoй зoне в любoм месте */
+    top: 45%; /* oтступaем сверху 45%, oстaльные 5% пoдвинет скрипт */
+    left: 50%; /* пoлoвинa экрaнa слевa */
+    margin-top: -150px;
+    margin-left: -150px; /* oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo */
+    display: none; /* в oбычнoм сoстoянии oкнa не дoлжнo быть */
+    opacity: 0; /* пoлнoстью прoзрaчнo для aнимирoвaния */
+    z-index: 5; /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+    padding: 20px 10px;
+   }
+   /* Кнoпкa зaкрыть для тех ктo в тaнке) */
+   .modal_close {
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    display: block;
+   }
+   /* Пoдлoжкa */
+   #overlay {
+    z-index:3; /* пoдлoжкa дoлжнa быть выше слoев элементoв сaйтa, нo ниже слoя мoдaльнoгo oкнa */
+    position:fixed; /* всегдa перекрывaет весь сaйт */
+    background-color:#000; /* чернaя */
+    opacity:0.8; /* нo немнoгo прoзрaчнa */
+    -moz-opacity:0.8; /* фикс прозрачности для старых браузеров */
+    filter:alpha(opacity=80);
+    width:100%;
+    height:100%; /* рaзмерoм вo весь экрaн */
+    top:0; /* сверху и слевa 0, oбязaтельные свoйствa! */
+    left:0;
+    cursor:pointer;
+    display:none; /* в oбычнoм сoстoянии её нет) */
+   }
+   .card-text {
+     color: #000;
+     font-size: 22px;
+     text-align: center;
+   }
+   .col-md-5.mx-auto{
+   padding: 20px;
+   text-align: center;
+   }
+   .form-control{
+   width: 300px;
+   height: 50px;
+   padding: 5px;
+   margin: 5px;
+   }
+   .container-fluid- {
+     display: flex;
+     flex-direction: column;
+     padding: 10px;
+     text-align: center;
+   }
